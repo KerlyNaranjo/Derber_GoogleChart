@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Azuay', 1.828],
+          ['Bolivar', 311],
+          ['Cañar',  450],
+          ['Carchi', 256],
+          ['Cotopaxi',761],
+          ['Chimborazo', 949],
+          ['Imbabura', 768],
+          ['Loja',  1.250],
+          ['Pichincha', 7.528],
+          ['Tungurahua', 1.174],
+          ['Santo Domingo de los Tsachilas',918],
+          ['El Oro', 1.553],
+          ['Esmeraldas', 770],
+          ['Guayas',  8.015],
+          ['Los Rios', 1.162],
+          ['Manabi',2.405],
+          ['Santa Elena', 543],
+          ['Morona Santiago', 363],
+          ['Napo',  355],
+          ['Pastaza',237],
+          ['Zamora Chinchipe',267],
+          ['Sucumbios',  349],
+          ['Orellana', 300],
+          ['Galápagos',97],
+          ['Zonas no delimitadas',11]
+        ]);
+
+        var options = {
+          title: 'Número de Médicos por provincias en el 2014',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
